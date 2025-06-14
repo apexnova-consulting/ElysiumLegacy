@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --foreground-rgb: 229, 228, 226;
+  --background-rgb: 10, 10, 10;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  font-family: 'Inter', sans-serif;
+}
+
+.font-serif {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+@layer components {
+  .elysium-container {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .elysium-button {
+    @apply bg-elysium-gold text-elysium-black px-8 py-3 text-sm uppercase tracking-wider font-medium transition-all duration-300 hover:bg-elysium-platinum;
+  }
+
+  .section-title {
+    @apply font-serif text-4xl md:text-5xl lg:text-6xl text-elysium-gold mb-8;
+  }
+
+  .section-subtitle {
+    @apply text-lg md:text-xl text-elysium-platinum mb-12;
+  }
+} 
