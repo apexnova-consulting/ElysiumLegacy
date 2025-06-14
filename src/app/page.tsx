@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { MotionDiv } from '@/components/MotionWrapper';
 import Section from '@/components/Section';
 import Button from '@/components/Button';
 import WaitlistForm from '@/components/WaitlistForm';
@@ -8,7 +8,7 @@ export default function Home() {
     <>
       {/* Hero Section */}
       <Section id="hero" className="min-h-screen flex items-center justify-center text-center">
-        <motion.div
+        <MotionDiv
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -19,8 +19,8 @@ export default function Home() {
           <p className="text-xl md:text-2xl lg:text-3xl text-elysium-platinum mb-12">
             Your Legacy. Preserved Eternally.
           </p>
-          <Button>Request Access to Elysium Legacy</Button>
-        </motion.div>
+          <Button>Request Access</Button>
+        </MotionDiv>
       </Section>
 
       {/* What Is Section */}
@@ -64,7 +64,7 @@ export default function Home() {
             "Personalized legacy framework (built 1-on-1 with you)",
             "Custom interface for heirs to 'consult' with you forever"
           ].map((benefit, index) => (
-            <motion.div
+            <MotionDiv
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -73,7 +73,7 @@ export default function Home() {
               className="p-6 border border-elysium-gold/30 hover:border-elysium-gold/60 transition-colors"
             >
               <p className="text-elysium-platinum">{benefit}</p>
-            </motion.div>
+            </MotionDiv>
           ))}
         </div>
       </Section>
@@ -87,7 +87,7 @@ export default function Home() {
             "AES 256-bit encryption across all assets",
             "You choose: delete or store with off-grid cold storage"
           ].map((feature, index) => (
-            <motion.div
+            <MotionDiv
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -96,7 +96,7 @@ export default function Home() {
               className="p-6 border border-elysium-gold/30"
             >
               <p className="text-elysium-platinum">{feature}</p>
-            </motion.div>
+            </MotionDiv>
           ))}
         </div>
       </Section>
@@ -111,7 +111,7 @@ export default function Home() {
             "AI Persona Training (we fine-tune your voice model)",
             "Interface Delivery (custom, private portal or heirloom vault)"
           ].map((step, index) => (
-            <motion.div
+            <MotionDiv
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -123,7 +123,7 @@ export default function Home() {
                 {(index + 1).toString().padStart(2, '0')}
               </div>
               <p className="text-elysium-platinum">{step}</p>
-            </motion.div>
+            </MotionDiv>
           ))}
         </div>
       </Section>

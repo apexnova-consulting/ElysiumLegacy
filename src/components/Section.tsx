@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { MotionSection } from './MotionWrapper';
 
 interface SectionProps {
   id: string;
@@ -10,7 +10,7 @@ interface SectionProps {
 
 export default function Section({ id, className = '', children }: SectionProps) {
   return (
-    <motion.section
+    <MotionSection
       id={id}
       className={`py-24 ${className}`}
       initial={{ opacity: 0, y: 20 }}
@@ -21,6 +21,6 @@ export default function Section({ id, className = '', children }: SectionProps) 
       <div className="elysium-container">
         {children}
       </div>
-    </motion.section>
+    </MotionSection>
   );
 } 
