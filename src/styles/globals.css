@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
   --foreground-rgb: 229, 228, 226;
@@ -16,16 +16,16 @@ body {
 }
 
 .font-serif {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Playfair Display', serif;
 }
 
 @layer components {
   .elysium-container {
-    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+    @apply container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
   }
   
   .elysium-button {
-    @apply bg-elysium-gold text-elysium-black px-8 py-3 text-sm uppercase tracking-wider font-medium transition-all duration-300 hover:bg-elysium-platinum;
+    @apply bg-transparent border border-elysium-gold text-elysium-gold px-8 py-3 text-sm uppercase tracking-wider font-medium transition-all duration-300 hover:bg-elysium-gold hover:text-elysium-black;
   }
 
   .section-title {
@@ -33,6 +33,26 @@ body {
   }
 
   .section-subtitle {
-    @apply text-lg md:text-xl text-elysium-platinum mb-12;
+    @apply text-lg md:text-xl text-elysium-platinum/90 mb-12 max-w-3xl mx-auto;
+  }
+
+  .shimmer-text {
+    @apply animate-shimmer;
+  }
+
+  .scroll-cue {
+    @apply animate-pulse-subtle cursor-pointer;
+  }
+
+  .fade-in-up {
+    @apply animate-fade-in-up;
+  }
+
+  .form-input {
+    @apply w-full bg-transparent border border-elysium-gold/30 px-4 py-3 text-elysium-platinum placeholder-elysium-platinum/50 focus:border-elysium-gold outline-none transition-colors;
+  }
+
+  .form-textarea {
+    @apply form-input resize-none;
   }
 } 
